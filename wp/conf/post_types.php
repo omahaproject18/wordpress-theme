@@ -6,14 +6,37 @@
  */
 function init_custom_post_types() {
 	$post_types = array(
+		'videos' => array(
+			'slug'			=> 'videos',
+			'title'			=> 'Videos',
+			'singular'		=> 'Video',
+			'plural'		=> 'Videos',
+			'menu_icon'		=> 'dashicons-analytics',
+			'supports'		=> array( 'title', 'editor', 'excerpt', 'content', 'thumbnail', 'comments', 'revisions', 'permalinks' ),
+			'taxonomies'	=> array( 'category', 'post_tag' ),
+			'position'		=> 11,
+			'has_archive'	=> true
+		),
+		'meetups' => array(
+			'slug'			=> 'meetups',
+			'title'			=> 'Meetups',
+			'singular'		=> 'Meetup',
+			'plural'		=> 'Meetups',
+			'menu_icon'		=> 'dashicons-analytics',
+			'supports'		=> array( 'title', 'content', 'revisions', 'permalinks' ),
+			'taxonomies'	=> array( 'category', 'post_tag' ),
+			'position'		=> 12,
+			'has_archive'	=> true
+		),
 		'stories' => array(
 			'slug'			=> 'stories',
-			'title'			=> 'Stories',
-			'singular'		=> 'Story',
-			'plural'		=> 'Stories',
+			'title'			=> 'P18 Stories',
+			'singular'		=> 'P18 Story',
+			'plural'		=> 'P18 Stories',
 			'menu_icon'		=> 'dashicons-analytics',
-			'supports'		=> array( 'title', 'content', 'author', 'revisions', 'permalinks' ),
-			'position'		=> 10,
+			'supports'		=> array( 'title', 'content', 'revisions', 'permalinks' ),
+			'taxonomies'	=> array( 'category', 'post_tag' ),
+			'position'		=> 15,
 			'has_archive'	=> true
 		),
 	);
@@ -49,7 +72,8 @@ function init_custom_post_types() {
 			'hierarchical'       => true,
 			'menu_position'      => $options['position'],
 			'menu_icon'          => $options['menu_icon'],
-			'supports'           => $options['supports']
+			'supports'           => $options['supports'],
+			'taxonomies'         => $options['taxonomies'],
 		);
 
 		register_post_type( $name, $args );
