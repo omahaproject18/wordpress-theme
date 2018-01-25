@@ -1,0 +1,38 @@
+{
+  "name": "techomaha",
+  "private": true,
+  "version": "1.0.0",
+  "main": "dist/techomaha.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "description": "Tech Omaha Theme using Stencil built Web Components.",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "watch": "stencil build --watch",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@stencil/core": "^0.1.6",
+    "smart-image-wc": "^2.0.0",
+    "wordpress-api-wc": "^0.1.4"
+  },
+  "devDependencies": {
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omahaproject18/wordpress-theme.git"
+  },
+  "author": "Tech Omaha ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omahaproject18/wordpress-theme"
+  },
+  "homepage": "https://github.com/omahaproject18/wordpress-theme"
+}
