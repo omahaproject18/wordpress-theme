@@ -6,29 +6,29 @@
 
 
 import {
-  Navigation as TechomahaNavigation
-} from './components/navigation/navigation';
+  Theme as TechomahaTheme
+} from './components/theme/theme';
 
 declare global {
-  interface HTMLTechomahaNavigationElement extends TechomahaNavigation, HTMLElement {
+  interface HTMLTechomahaThemeElement extends TechomahaTheme, HTMLElement {
   }
-  var HTMLTechomahaNavigationElement: {
-    prototype: HTMLTechomahaNavigationElement;
-    new (): HTMLTechomahaNavigationElement;
+  var HTMLTechomahaThemeElement: {
+    prototype: HTMLTechomahaThemeElement;
+    new (): HTMLTechomahaThemeElement;
   };
   interface HTMLElementTagNameMap {
-    "techomaha-navigation": HTMLTechomahaNavigationElement;
+    "techomaha-theme": HTMLTechomahaThemeElement;
   }
   interface ElementTagNameMap {
-    "techomaha-navigation": HTMLTechomahaNavigationElement;
+    "techomaha-theme": HTMLTechomahaThemeElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "techomaha-navigation": JSXElements.TechomahaNavigationAttributes;
+      "techomaha-theme": JSXElements.TechomahaThemeAttributes;
     }
   }
   namespace JSXElements {
-    export interface TechomahaNavigationAttributes extends HTMLAttributes {
+    export interface TechomahaThemeAttributes extends HTMLAttributes {
       
     }
   }
