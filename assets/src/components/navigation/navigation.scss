@@ -39,4 +39,14 @@ techomaha-navigation {
         cursor: pointer;
         outline: none;
     }
+
+    div.sites {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+    }
+    button.site {
+        margin-right: 1em;
+    }
 }

@@ -12,6 +12,13 @@ export class Navigation {
         'Calendar'
     ]
 
+    // TODO: use images
+    sites = [
+        'S',
+        'T',
+        'F'
+    ]
+
     handleSelect(item, event) {
         console.log(`clicked ${item} (${event.target})`)
     }
@@ -26,6 +33,11 @@ export class Navigation {
                 {page}
             </button>
             )}
+            <div class="sites">{this.sites.map(site =>
+            <button class="site" onClick={this.handleSelect.bind(this, site)}>
+                {site}
+            </button>
+            )}</div>
         </div>
     }
 }
