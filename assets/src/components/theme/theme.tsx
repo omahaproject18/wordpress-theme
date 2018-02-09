@@ -1,12 +1,12 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'techomaha-theme',
-  styleUrl: 'theme.scss'
+    tag: 'techomaha-theme',
+    styleUrl: 'theme.scss'
 })
 
 export class Theme {
-  render() {
-  	return <slot />
-  }
+    render() {
+        return <slot />
+    }
 }
