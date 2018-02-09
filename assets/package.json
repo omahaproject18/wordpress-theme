@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@stencil/core": "^0.1.6",
+    "normalize.css": "^8.0.0",
     "smart-image-wc": "^2.0.0",
     "wordpress-api-wc": "^0.1.4"
   },
