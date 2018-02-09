@@ -4,23 +4,28 @@ import { Component } from '@stencil/core';
     tag: 'techomaha-navigation',
     styleUrl: 'navigation.scss'
 })
-
 export class Navigation {
-    items = [
-        'Home',
+    pages = [
         'About',
         'Videos',
         'Project 18',
         'Calendar'
     ]
 
-    handleSelect(item) {
-        console.log(`clicked ${item}`)
+    handleSelect(item, event) {
+        console.log(`clicked ${item} (${event.target})`)
     }
 
     render() {
-        return <div>
-            {this.items.map(item => <button onClick={this.handleSelect.bind(item)}>{item}</button>)}
+        return <div class="container">
+            <a class="logo" href="https://techomaha.org/">
+                <img alt="Tech Omaha logo" src="images/tech-omaha-logo.png" />
+            </a>
+            {this.pages.map(page =>
+            <button class="page" onClick={this.handleSelect.bind(this, page)}>
+                {page}
+            </button>
+            )}
         </div>
     }
 }

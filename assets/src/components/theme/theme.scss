@@ -1,7 +1,9 @@
 techomaha-theme {
-    text-align: center;
-
-    color: orange;
+    >div.container {
+        // 8em to match the height of the sticky header/navigation
+        margin-top: 9em;
+        padding: 0 7em;
+    }
 
     * {
         color: red;

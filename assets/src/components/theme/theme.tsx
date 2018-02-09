@@ -7,6 +7,8 @@ import { Component } from '@stencil/core';
 
 export class Theme {
     render() {
-        return <slot />
+        return <div class="container">
+            <slot />
+        </div>
     }
 }

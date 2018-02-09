@@ -1,14 +1,42 @@
+$item-padding: .5em;
+$item-spacing: 1.5em;
+
 techomaha-navigation {
-    button {
-        margin: 0 2em;
-        padding: .5em;
+    >div.container {
+        padding: 0 7em;
+
+        width: 100%;
+        height: 9em;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+
+        box-shadow: 0 0 1.5em lightgray;
+    }
+
+    a.logo {
+        margin-right: 2.5em;
+        padding: $item-padding;
+
+        img {
+            width: 8em;
+        }
+    }
+
+    button.page {
+        margin-right: $item-spacing;
+        padding: $item-padding;
         border: none;
 
         background: transparent;
         color: #333333;
         font-size: 1em;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         cursor: pointer;
+        outline: none;
     }
 }
