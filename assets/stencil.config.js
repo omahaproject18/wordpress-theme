@@ -3,7 +3,8 @@ exports.config = {
   generateDistribution: true,
   bundles: [
     { components: ['techomaha-theme'] }
-  ]
+  ],
+  globalStyle: 'src/index.scss'
 };
 
 exports.devServer = {
