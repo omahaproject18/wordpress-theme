@@ -1,4 +1,13 @@
 techomaha-navigation {
-    .item {
+    button {
+        margin: 0 2em;
+        padding: .5em;
+        border: none;
+
+        background: transparent;
+        color: #333333;
+        font-size: 1em;
+        font-weight: 600;
+        text-transform: uppercase;
     }
 }
