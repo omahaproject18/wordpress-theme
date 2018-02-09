@@ -6,29 +6,29 @@
 
 
 import {
-  Theme as TechomahaTheme
-} from './components/theme/theme';
+  Button as TechomahaButton
+} from './components/button/button';
 
 declare global {
-  interface HTMLTechomahaThemeElement extends TechomahaTheme, HTMLElement {
+  interface HTMLTechomahaButtonElement extends TechomahaButton, HTMLElement {
   }
-  var HTMLTechomahaThemeElement: {
-    prototype: HTMLTechomahaThemeElement;
-    new (): HTMLTechomahaThemeElement;
+  var HTMLTechomahaButtonElement: {
+    prototype: HTMLTechomahaButtonElement;
+    new (): HTMLTechomahaButtonElement;
   };
   interface HTMLElementTagNameMap {
-    "techomaha-theme": HTMLTechomahaThemeElement;
+    "techomaha-button": HTMLTechomahaButtonElement;
   }
   interface ElementTagNameMap {
-    "techomaha-theme": HTMLTechomahaThemeElement;
+    "techomaha-button": HTMLTechomahaButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "techomaha-theme": JSXElements.TechomahaThemeAttributes;
+      "techomaha-button": JSXElements.TechomahaButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface TechomahaThemeAttributes extends HTMLAttributes {
+    export interface TechomahaButtonAttributes extends HTMLAttributes {
       
     }
   }
