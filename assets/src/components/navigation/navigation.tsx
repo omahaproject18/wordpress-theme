@@ -13,11 +13,16 @@ export class Navigation {
     ]
 
     // TODO: use images
-    sites = [
-        'S',
-        'T',
-        'F'
-    ]
+    sites = [{
+        icon: 'slack-hash',
+        name: 'Slack'
+    }, {
+        icon: 'twitter',
+        name: 'Twitter'
+    }, {
+        icon: 'facebook-f',
+        name: 'Facebook'
+    }]
 
     handleSelect(item, event) {
         console.log(`clicked ${item} (${event.target})`)
@@ -33,11 +38,13 @@ export class Navigation {
                 {page}
             </button>
             )}
-            <div class="sites">{this.sites.map(site =>
-            <button class="site" onClick={this.handleSelect.bind(this, site)}>
-                {site}
-            </button>
-            )}</div>
+            <div class="sites">
+                {this.sites.map(site =>
+                <button class="site" onClick={this.handleSelect.bind(this, site)}>
+                    <i class={`fab fa-${site.icon}`} title={`${site.name}`}></i>
+                </button>
+                )}
+            </div>
         </div>
     }
 }

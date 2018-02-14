@@ -3,8 +3,6 @@ $item-spacing: 1.5em;
 
 techomaha-navigation {
     >div.container {
-        padding: 0 7em;
-
         width: 100%;
         height: 9em;
         position: fixed;
@@ -14,10 +12,13 @@ techomaha-navigation {
         display: flex;
         align-items: center;
 
+        color: #333333;
+        background: #ffffff;
         box-shadow: 0 0 1.5em lightgray;
     }
 
     a.logo {
+        margin-left: 7em;
         margin-right: 2.5em;
         padding: $item-padding;
 
@@ -31,8 +32,8 @@ techomaha-navigation {
         padding: $item-padding;
         border: none;
 
-        background: transparent;
         color: #333333;
+        background: transparent;
         font-size: 1em;
         font-weight: 700;
         text-transform: uppercase;
@@ -41,12 +42,25 @@ techomaha-navigation {
     }
 
     div.sites {
+        margin-right: 7em;
         position: absolute;
-        top: 0;
         right: 0;
-        width: 50%;
     }
     button.site {
         margin-right: 1em;
+        border: none;
+
+        color: #333333;
+        background: transparent;
+        cursor: pointer;
+        outline: none;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & path {
+            color: #333333;
+        }
     }
 }
