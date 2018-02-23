@@ -11,6 +11,7 @@ $mandatory_includes = [
 	'wp/init/routes.php',             // Reroute pages or archives
 	'wp/init/activation.php',         // Theme activation
 	'wp/init/assets.php',             // Scripts and stylesheets
+	'wp/conf/navigation.php',         // Initiates navigation
 	'wp/conf/post_types.php',         // Initiates custom post types
 	'wp/conf/post_taxonomies.php',    // Initiates taxonomies
 	'wp/conf/post_acf.php',           // Initiates default ACF fields

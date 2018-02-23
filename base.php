@@ -96,9 +96,13 @@ ob_start(); ?>
 	?>
 </head>
 <body <?php body_class('content-wrapper'); ?> data-section="top">
-	<wordpress-api nonce="<?php echo wp_create_nonce( 'wp_rest' ); ?>"></wordpress-api>
+	<wordpress-api nonce="<?php echo wp_create_nonce( 'wp_rest' ); ?>" />
 
-	<?php echo $content; ?>
+	<?php get_template_part('header'); ?>
+	<techomaha-main>
+		<?php echo $content; ?>
+	</techomaha-main>
+	<?php get_template_part('footer'); ?>
 
 	<?php $sendo->output('prepend_captured_scripts'); ?>
 	<?php wp_footer(); ?>

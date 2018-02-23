@@ -5,7 +5,6 @@
     "declaration": false,
     "experimentalDecorators": true,
     "lib": [
-      "webworker",
       "dom",
       "es2015"
     ],

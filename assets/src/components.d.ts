@@ -5,12 +5,21 @@
  */
 
 
+declare global {
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+  }
+}
+
+
+
 import {
   Theme as TechomahaTheme
 } from './components/theme/theme';
 
 declare global {
-  interface HTMLTechomahaThemeElement extends TechomahaTheme, HTMLElement {
+  interface HTMLTechomahaThemeElement extends TechomahaTheme, HTMLStencilElement {
   }
   var HTMLTechomahaThemeElement: {
     prototype: HTMLTechomahaThemeElement;
@@ -34,3 +43,4 @@ declare global {
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }
