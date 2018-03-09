@@ -29,37 +29,10 @@ declare global {
   }
   namespace JSXElements {
     export interface TechomahaButtonAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  Theme as TechomahaTheme
-} from './components/theme/theme';
-
-declare global {
-  interface HTMLTechomahaThemeElement extends TechomahaTheme, HTMLElement {
-  }
-  var HTMLTechomahaThemeElement: {
-    prototype: HTMLTechomahaThemeElement;
-    new (): HTMLTechomahaThemeElement;
-  };
-  interface HTMLElementTagNameMap {
-    "techomaha-theme": HTMLTechomahaThemeElement;
-  }
-  interface ElementTagNameMap {
-    "techomaha-theme": HTMLTechomahaThemeElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "techomaha-theme": JSXElements.TechomahaThemeAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface TechomahaThemeAttributes extends HTMLAttributes {
-      
+      emoji?: string;
+      href?: string;
+      type?: string;
+      value?: string;
     }
   }
 }

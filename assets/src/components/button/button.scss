@@ -8,21 +8,15 @@ techomaha-button {
 	width: 150px;
 	border-radius: 20px;
 
-	&.hover{
-		background-color: #ffffff;
-		color: #ff00e9;
-		border: 3px solid #0366d6;
-	}
-
  	&.outline{
 		background-color: #ffffff;
-		color: #ff00e9;
+		color: #0366d6;
 		border: 3px solid #0366d6;
 	}
 
 	&.invert{
 		background-color: #ffffff;
-		color: #ff00e9;
+		color: #0366d6;
 		border: 3px solid #ffffff;
 	}
 }
