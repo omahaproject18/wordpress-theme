@@ -1,13 +1,28 @@
 techomaha-button {
 	visibility: visible;
 	background-color: #0366d6;
-	color: #ff00e9;
-	padding: 10px;
+	color: white;
+	padding: 30px;
+	text-align: center;
 	height: 50px;
 	width: 150px;
+	border-radius: 20px;
 
-	&:hover {
-	 background-color: #ffffff;
-	 color: #000000;
- }
+	&.hover{
+		background-color: #ffffff;
+		color: #ff00e9;
+		border: 3px solid #0366d6;
+	}
+
+ 	&.outline{
+		background-color: #ffffff;
+		color: #ff00e9;
+		border: 3px solid #0366d6;
+	}
+
+	&.invert{
+		background-color: #ffffff;
+		color: #ff00e9;
+		border: 3px solid #ffffff;
+	}
 }
