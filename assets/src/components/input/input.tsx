@@ -9,39 +9,20 @@ import { Component, Prop } from '@stencil/core';
 
 export class Input {
   @Prop() type: string;
+  @Prop() name: string;
+  @Prop() placeholder: string;
+  @Prop() value: string;
 
 
 
-  render() {
-  	return (
-
-        <input type={this.type}/>
-
-    );
-  }
+  render(){
+		if ( this.type === "textarea" ){
+			return ( <textarea name={this.name} placeholder={this.placeholder}> {this.value} </textarea>)
+		} else {
+			return ( <input type={this.type} name={this.name} placeholder={this.placeholder} value={this.value}/>)
+		}
+	}
 }
+ 
 
 
-// THis is the html I want to render
-// <input  type="email">
-
-
-// import { Component, Prop } from '@stencil/core';
-
-// @Component({
-//   tag: 'my-first-component',
-//   styleUrl: 'my-first-component.scss'
-// })
-// export class MyComponent {
-
-//   // Indicate that name should be a public property on the component
-//   @Prop() name: string;
-
-//   render() {
-//     return (
-//       <p>
-//         My name is {this.name}
-//       </p>
-//     );
-//   }
-// }
