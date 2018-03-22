@@ -4,14 +4,14 @@
  * component - Load component partials without dealing with writing the directory
  */
 function component( $slug, $name = null ) {
-	get_template_part('partials/components/' . $slug, $name);
+	get_template_part('components/' . $slug, $name);
 }
 
 /**
  * section - Load section partials without dealing with writing the directory
  */
 function section( $slug, $name = null ) {
-	get_template_part('partials/sections/' . $slug, $name);
+	get_template_part('sections/' . $slug, $name);
 }
 
 /**
