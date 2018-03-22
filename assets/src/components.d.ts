@@ -46,10 +46,7 @@ declare global {
   }
   namespace JSXElements {
     export interface TechomahaInputAttributes extends HTMLAttributes {
-      name?: string;
-      placeholder?: string;
       type?: string;
-      value?: string;
     }
   }
 }
