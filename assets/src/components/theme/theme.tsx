@@ -3,12 +3,14 @@ import 'smart-image-wc';
 import 'ionicons';
 
 @Component({
-  tag: 'techomaha-theme',
-  styleUrl: 'theme.scss'
+    tag: 'techomaha-theme',
+    styleUrl: 'theme.scss'
 })
 
 export class Theme {
-  render() {
-  	return <slot />
-  }
+    render() {
+        return <div class="container">
+            <slot />
+        </div>
+    }
 }

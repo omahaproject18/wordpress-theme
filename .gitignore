@@ -1,2 +1,28 @@
+# See https://help.github.com/ignore-files/
+# (or `man 5 gitignore`) to learn about ignoring files.
+
 assets/dist
+
+### file viewer junk
+# MacOS / Finder
+.DS_Store
+
+### editors, IDEs
+# IntelliJ IDEA
+\.idea/
+# Vim (https://www.gitignore.io/api/vim)
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+# End of https://www.gitignore.io/api/vim
+
 assets/src/components.d.ts
