@@ -7,6 +7,7 @@ import { Component, Prop } from '@stencil/core';
 
 export class Grid {
     @Prop() padding: 0;
+    @Prop() column: 0;
 
     render() {
         return <slot />
