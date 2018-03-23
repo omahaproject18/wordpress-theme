@@ -12,7 +12,8 @@ export class About {
   render() {
     return [
       <techomaha-grid column={this.column} padding={this.padding}></techomaha-grid>,
-      <techomaha-meetup></techomaha-meetup>
+      <techomaha-meetup></techomaha-meetup>,
+      <techomaha-contact></techomaha-contact>
     ];
   }
 }
