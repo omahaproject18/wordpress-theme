@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import { Component, State } from '@stencil/core';
 
 @Component({
   tag: 'techomaha-about',
@@ -6,7 +6,13 @@ import { Component } from '@stencil/core';
 })
 
 export class About {
+  @State() column: "2-column";
+  @State() padding: 0;
+
   render() {
-  	return <slot />
+    return [
+      <techomaha-grid column={this.column} padding={this.padding}></techomaha-grid>,
+      <techomaha-meetup></techomaha-meetup>
+    ];
   }
 }
