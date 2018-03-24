@@ -1,6 +1,4 @@
-import { Component, State } from '@stencil/core';
-import 'smart-image-wc';
-import 'ionicons';
+import { Component, State, Prop, Element, Listen } from '@stencil/core';
 
 @Component({
   tag: 'techomaha-select',
@@ -8,30 +6,42 @@ import 'ionicons';
 })
 
 export class Select {
-  @Prop() options: string[];
-  @State() value: string;
-  @State() selectValue: string;
+  @Element() element: HTMLElement;
+  @Prop() name: string = "select[]";
+  @Prop() value: string;
+  @Prop() placeholder: string = "Select an option...";
 
+
+  @State() selectedValue: string;
+  @State() open: boolean = false;
+
+  @Listen("selected")
   handleSelect(event) {
-    console.log(event.target.value);
-    this.selectValue = event.target.value;
+    this.selectedValue = event.target.value;
+    this.toggleOptions();
   }
 
-  handleChange(event) {
-    this.value = event.target.value;
+  componentWillLoad() {
+    this.selectedValue = this.value;
+  }
 
-    if (event.target.validity.typeMismatch) {
-      console.log('this element is not valid')
-    }
+  // Adding onBlur event will not trigger the selected event
+  toggleOptions() {
+    this.open = !this.open;
   }
 
   render() {
     return (
-      <select value={this.selectValue} onInput={(event) => this.handleSelect(event)}>
-      {this.options.map((option) =>
-        <option value={option} selected={option === this.selectValue}>{option}</option>
-      )}
-      </select>
+      <div class={"select open-" + this.open} onInput={ (event) => this.handleSelect(event) }>
+        <input name={this.name}
+               placeholder={this.placeholder}
+               value={this.selectedValue}
+               onFocus={ () => this.toggleOptions() }
+               />
+        <div class="options">
+          <slot></slot>
+        </div>
+      </div>
     )
   }
 }

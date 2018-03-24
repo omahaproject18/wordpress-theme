@@ -1,5 +1,38 @@
 techomaha-select {
-	* {
-		color: red;
+	.select {
+
+    width: 30%;
+    padding: 2px;
+    border: 1px solid var(--gray, #EEEEEE);
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(238,238,238,1);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(238,238,238,1);
+    box-shadow: 2px 2px 6px 0px rgba(238,238,238,1);
+
+    &.open-true {
+      .options {
+        visibility: unset;
+        overflow-y: scroll;
+
+        height: 64px;
+        -webkit-transition: height 1s;
+        transition: height 1s;
+      }
+    }
+
+    .options {
+      visibility: hidden;
+      height: 0;
+      transition: height 1s;
+    }
+
+    input {
+      width: calc(100% - 32px); // minus the padding
+      padding-left: 20px;
+
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><metadata><?xpacket begin="&#65279;" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.0-c061 64.140949, 2010/12/07-10:57:01        "></x:xmpmeta><?xpacket end="w"?></metadata><g><path d="M62.745,52.872c-0.486-0.484-1.672-0.272-2.373,0.428c-0.602,0.601-1.722,1.722-2.804,2.803      c-1.079,1.078-2.197,2.197-2.8,2.801c-0.701,0.7-0.913,1.888-0.426,2.376c2.207,2.207,6.419,5.016,10.435,9.032      c10.169,10.17,22.869,24.271,26.555,27.957c0.486,0.487,1.675,0.272,2.373-0.43c0.521-0.52,1.624-1.621,2.805-2.799      c1.178-1.181,2.278-2.282,2.8-2.803c0.7-0.699,0.915-1.887,0.427-2.373C96.05,86.18,81.948,73.476,71.78,63.309      C67.766,59.294,64.955,55.082,62.745,52.872z"></path><path d="M54.477,10.816c-12.462-12.463-32.667-12.463-45.129,0c-12.463,12.462-12.463,32.667,0,45.132      c12.462,12.46,32.667,12.46,45.129,0C66.942,43.482,66.942,23.278,54.477,10.816z M48.534,50.003      c-9.18,9.18-24.063,9.18-33.243,0c-9.179-9.18-9.179-24.063,0-33.243c9.18-9.179,24.063-9.18,33.243,0      C57.714,25.941,57.714,40.823,48.534,50.003z"></path></g></svg>');
+      background-size: 16px 16px;
+      background-position: 2px;
+      background-repeat: no-repeat;
+    }
 	}
 }

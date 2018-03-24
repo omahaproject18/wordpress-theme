@@ -6,7 +6,6 @@ import 'ionicons';
     tag: 'techomaha-theme',
     styleUrl: 'theme.scss'
 })
-
 export class Theme {
     render() {
         return <div class="container">
